@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand text-white ms-2">Consulta CEP</a>
+        <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Insira algum CEP" id="cep">
+            <button class="btn btn-outline-success me-2" onclick="cepConsult()">Buscar</button>
+        </div> 
+    </nav>
+
+    <div class="container mt-5">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+        <div class="bem-vindo">
+            <h4>Seja bem vindo!</h4> 
+            <p>
+                O objetivo desse sistema é aprofundar meu conhecimento em requisições AJAX utilizando
+                a biblioteca <a href="http://">Jquery</a>. </br>
+                Os ceps consultados são retornos de requisições feitas para a API 
+                da <a href="http://viacep.com.br">Via Cep</a>. </br>
+                Esse sistema foi construído utilizando as seguintes ferramentas: </br>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML (Linguagem de marcação de Texto)</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">Javascript (Linguagem de programação)</a></li>
+                    <li><a href="https://jquery.com/">Jquery (Biblioteca Javascript)</a></li>
+                    <li><a href="https://getbootstrap.com/">BootStrap (Framework CSS)</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX/Getting_Started">AJAX (Conjunto de técnicas)</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="container cep mt-5">
+        <div class="row">
+            <h3 id="titulo">CEP</h3>
+        </div>
+
+        <div class="row">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Logradouro:</td>
+                        <td id="log"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Bairro:</td>
+                        <td id="bairro"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Localidade:</td>
+                        <td id="localidade"></td>
+                    </tr>
+
+                    <tr>
+                        <td>UF:</td>
+                        <td id="uf"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
